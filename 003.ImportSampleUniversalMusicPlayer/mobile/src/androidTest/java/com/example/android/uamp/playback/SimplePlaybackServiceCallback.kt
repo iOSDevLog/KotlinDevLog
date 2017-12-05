@@ -13,28 +13,24 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package com.example.android.uamp.playback;
+package com.example.android.uamp.playback
 
-import android.support.v4.media.session.PlaybackStateCompat;
+import android.support.v4.media.session.PlaybackStateCompat
 
-class SimplePlaybackServiceCallback implements PlaybackManager.PlaybackServiceCallback {
-    @Override
-    public void onPlaybackStart() {
-
-    }
-
-    @Override
-    public void onNotificationRequired() {
+internal open class SimplePlaybackServiceCallback : PlaybackManager.PlaybackServiceCallback {
+    override fun onPlaybackStart() {
 
     }
 
-    @Override
-    public void onPlaybackStop() {
+    override fun onNotificationRequired() {
 
     }
 
-    @Override
-    public void onPlaybackStateUpdated(PlaybackStateCompat newState) {
+    override fun onPlaybackStop() {
+
+    }
+
+    override fun onPlaybackStateUpdated(newState: PlaybackStateCompat) {
 
     }
 }

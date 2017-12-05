@@ -14,26 +14,24 @@
  * limitations under the License.
  */
 
-package com.example.android.uamp.utils;
+package com.example.android.uamp.utils
 
-import android.support.v4.media.MediaMetadataCompat;
+import android.support.v4.media.MediaMetadataCompat
 
-import com.example.android.uamp.model.MusicProviderSource;
+import com.example.android.uamp.model.MusicProviderSource
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.ArrayList
 
-public class SimpleMusicProviderSource implements MusicProviderSource {
+class SimpleMusicProviderSource : MusicProviderSource {
 
-    private List<MediaMetadataCompat> mData = new ArrayList<>();
+    private val mData = ArrayList<MediaMetadataCompat>()
 
-    public void add(String title, String album, String artist, String genre, String source,
-                    String iconUrl, long trackNumber, long totalTrackCount, long durationMs) {
-        String id = String.valueOf(source.hashCode());
+    fun add(title: String, album: String, artist: String, genre: String, source: String,
+            iconUrl: String, trackNumber: Long, totalTrackCount: Long, durationMs: Long) {
+        val id = source.hashCode().toString()
 
-        //noinspection ResourceType
-        mData.add(new MediaMetadataCompat.Builder()
+
+        mData.add(MediaMetadataCompat.Builder()
                 .putString(MediaMetadataCompat.METADATA_KEY_MEDIA_ID, id)
                 .putString(MusicProviderSource.CUSTOM_METADATA_TRACK_SOURCE, source)
                 .putString(MediaMetadataCompat.METADATA_KEY_ALBUM, album)
@@ -44,12 +42,11 @@ public class SimpleMusicProviderSource implements MusicProviderSource {
                 .putString(MediaMetadataCompat.METADATA_KEY_TITLE, title)
                 .putLong(MediaMetadataCompat.METADATA_KEY_TRACK_NUMBER, trackNumber)
                 .putLong(MediaMetadataCompat.METADATA_KEY_NUM_TRACKS, totalTrackCount)
-                .build());
+                .build())
     }
 
-    @Override
-    public Iterator<MediaMetadataCompat> iterator() {
-        return mData.iterator();
+    override fun iterator(): Iterator<MediaMetadataCompat> {
+        return mData.iterator()
     }
 
 }

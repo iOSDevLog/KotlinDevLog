@@ -13,27 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.uamp.playback;
+package com.example.android.uamp.playback
 
-import android.support.v4.media.MediaMetadataCompat;
-import android.support.v4.media.session.MediaSessionCompat;
+import android.support.v4.media.MediaMetadataCompat
+import android.support.v4.media.session.MediaSessionCompat
 
-import java.util.List;
+open class SimpleMetadataUpdateListener : QueueManager.MetadataUpdateListener {
+    override fun onMetadataChanged(metadata: MediaMetadataCompat) {}
 
-public class SimpleMetadataUpdateListener implements QueueManager.MetadataUpdateListener{
-    @Override
-    public void onMetadataChanged(MediaMetadataCompat metadata) {
-    }
+    override fun onMetadataRetrieveError() {}
 
-    @Override
-    public void onMetadataRetrieveError() {
-    }
+    override fun onCurrentQueueIndexUpdated(queueIndex: Int) {}
 
-    @Override
-    public void onCurrentQueueIndexUpdated(int queueIndex) {
-    }
-
-    @Override
-    public void onQueueUpdated(String title, List<MediaSessionCompat.QueueItem> newQueue) {
-    }
+    override fun onQueueUpdated(title: String, newQueue: List<MediaSessionCompat.QueueItem>) {}
 }
