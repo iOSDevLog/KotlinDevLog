@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:support="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.iosdevlog.actionbarcompat_shareactionprovider.MainActivity">
+    <item
+        android:id="@+id/menu_share"
+        android:orderInCategory="100"
+        android:title="@string/menu_share"
+        support:actionProviderClass="android.support.v7.widget.ShareActionProvider"
+        support:showAsAction="always" />
+</menu>

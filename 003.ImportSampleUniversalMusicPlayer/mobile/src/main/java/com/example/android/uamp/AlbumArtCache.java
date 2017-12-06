@@ -64,7 +64,6 @@ public final class AlbumArtCache {
                 return value[BIG_BITMAP_INDEX].getByteCount()
                     + value[ICON_BITMAP_INDEX].getByteCount();
             }
-            t
         };
     }
 

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ActionBarCompat-ShareActionProvider</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="intro_message">
+        <![CDATA[
+
+
+            This sample shows you how a provide a context-sensitive ShareActionProvider with
+            ActionBarCompat, backwards compatible to API v7.
+
+
+        ]]>
+    </string>
+    <string name="menu_share">Share</string>
+    <string name="quote_1">Expectation is the root of all heartache - William Shakespeare</string>
+    <string name="quote_2">The true sign of intelligence is not knowledge but imagination - Albert
+        Einstein</string>
+    <string name="quote_3">As for me, all I know is that I know nothing - Socrates</string>
+</resources>
